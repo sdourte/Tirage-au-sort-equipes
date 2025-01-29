@@ -1,0 +1,98 @@
+/* Nouveau style pour la disposition */
+body {
+    font-family: Arial, sans-serif; /* Définition de la police d'écriture */
+    display: flex; /* Utilisation de Flexbox pour organiser les sections */
+    justify-content: space-between; /* Espace entre les sections de gauche et de droite */
+    padding: 20px; /* Espace autour du contenu */
+    background-color: #f4f4f4; /* Couleur de fond de la page */
+    height: 100vh; /* Hauteur de la page égale à la hauteur de l'écran */
+}
+
+#left-section, #right-section {
+    width: 48%; /* Chaque section occupe 48% de la largeur */
+}
+
+h1, h2, h3 {
+    color: #333; /* Couleur du texte des titres */
+}
+
+button {
+    padding: 10px 15px; /* Espacement autour du texte dans le bouton */
+    font-size: 1em; /* Taille de la police */
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Pas de bordure autour du bouton */
+    cursor: pointer; /* Curseur en forme de main quand on passe dessus */
+    margin: 10px; /* Marge autour du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    transition: 0.3s; /* Transition douce lors du survol */
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur du bouton quand il est survolé */
+}
+
+input, select {
+    padding: 8px; /* Espacement interne des champs */
+    font-size: 1em; /* Taille de la police */
+    margin: 10px; /* Marge autour des champs */
+    width: 100%; /* Les champs occupent toute la largeur disponible */
+}
+
+ul {
+    list-style-type: none; /* Supprime les puces des listes */
+    animation: fadeIn 0.5s ease-in-out; /* Animation d'apparition des éléments de liste */
+    font-size: 1.2em; /* Taille du texte des éléments de la liste */
+    font-weight: bold; /* Texte en gras */
+    color: #007bff; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    padding: 0; /* Enlève le padding par défaut */
+}
+
+li {
+    animation: fadeIn 0.5s ease-in-out; /* Animation pour chaque élément de la liste */
+    font-size: 1.2em; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #007bff; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+}
+
+#result {
+    margin-top: 20px; /* Marge au-dessus de la section des résultats */
+}
+
+#result div {
+    background: #fff; /* Fond blanc pour chaque section d'équipe */
+    padding: 15px; /* Espacement interne */
+    margin: 10px auto; /* Marge autour des sections d'équipe */
+    width: 80%; /* Réduit la largeur de chaque section d'équipe */
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre légère autour des sections */
+    opacity: 0; /* Initialement invisible */
+    transform: translateY(20px); /* Effet de décalage vertical */
+    animation: fadeInUp 0.5s ease-in-out forwards; /* Animation pour faire apparaître la section */
+}
+
+/* Animation pour faire apparaître les éléments de façon fluide */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour faire apparaître les éléments de la liste */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

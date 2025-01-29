@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirage au sort</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <link rel="icon" href="icone.png" type="image/png">
+
+</head>
+<body>
+    <!-- Section gauche pour l'entrée des joueurs et des paramètres -->
+    <div id="left-section">
+        <h1>Tirage au sort</h1>
+
+        <div>
+            <label for="playerName">Nom du joueur :</label>
+            <input type="text" id="playerName">
+            <button onclick="addPlayer()">Ajouter</button>
+        </div>
+
+        <div>
+            <label for="teamsCount">Nombre d'équipes :</label>
+            <input type="number" id="teamsCount" min="2" value="2">
+        </div>
+
+        <div>
+            <label for="teamNames">Noms des équipes (séparés par une virgule) :</label>
+            <input type="text" id="teamNames">
+        </div>
+
+        <div>
+            <label for="mode">Mode :</label>
+            <select id="mode">
+                <option value="random">Aléatoire</option>
+                <option value="manual">Manuel</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="captains">Capitaines :</label>
+            <input type="text" id="captains" placeholder="Nom du capitaine (séparé par une virgule)">
+        </div>
+
+        <button onclick="startDraw()">Lancer le tirage</button>
+
+    </div>
+
+    <!-- Section droite pour afficher la liste des joueurs et les résultats -->
+    <div id="right-section">
+        <h2>Joueurs :</h2>
+        <ul id="playersList"></ul>
+        
+        <h2>Résultat :</h2>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
