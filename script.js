@@ -90,7 +90,7 @@ function displayResults(teamNames) {
                     setTimeout(() => {
                         clearInterval(randomInterval);
                         listItem.textContent = player; // Affichage final du bon joueur
-                    }, 10000); // 10 secondes de suspense
+                    }, 8000); // 8 secondes de suspense
                 }, i * 2500); // Défilement joueur par joueur
             });
         }, index); // Pause entre chaque équipe
